@@ -1,0 +1,43 @@
+body
+{
+    color: blanchedalmond;
+    background-color: darkslategrey;
+}
+
+.input
+{
+padding: 10px;
+}
+
+
+#button 
+{
+    position: absolute;
+    top: 4px;
+    right:5px;
+  
+}
+.didIt
+{
+    top: 10px;
+    right:80px;
+}
+.btn2
+{
+    top: 10px;
+    right: 5px ;
+}
+.search
+{
+    padding: 10px;
+}
+ul li
+{
+    background-color: rgba(233, 150, 122, 0.486);
+    color: rgb(10, 8, 8);
+    font-size: 20px;
+}
+.line-decoration
+{
+    text-decoration: line-through red solid;
+}
