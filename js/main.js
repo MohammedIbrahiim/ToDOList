@@ -39,23 +39,23 @@ function displaylist(displaytasks)
     for(let i=0 ; i<displaytasks.length ; i++)
     {
         cartoona += `
-        <div id="exx${i}" class="row align-items-center w-75 mx-auto gx-0 m-2">
-        <div class="col-sm-1 pe-sm-1 " onclick="itok(${i})">
-            <div class="icon  d-flex align-items-center justify-content-center">
-                <i class="far fa-check-circle check"></i>               
-            </div>
+        <div id="exx${i}" class="row d-flex flex-nowrap  w-75 mx-auto gx-0 my-2">
+        <div class="col-sm-1 one pe-sm-1  " onclick="itok(${i})">
+        <div class="icon  d-flex align-items-center justify-content-center">
+            <i class="far fa-check-circle check"></i>               
         </div>
-        <div id="cheack${i}" class="item col-sm-10  ">
-            <div class="content mt-3 ms-3 ">
-                <h1 class="fs-6">${displaytasks[i].lists}</h1>
-            </div>
+    </div>
+    <div id="cheack${i}"  two class="item col-sm-10 ">
+        <div class="content mt-3 ms-3 ">
+            <h1 class="fs-6">${displaytasks[i].lists}</h1>
         </div>
-        <div class="col-sm-1 ps-md-1" id="deletebtn" onclick="deleteList(${i})">
-            <div class="icon2  d-flex align-items-center justify-content-center">
-              <i class="fa-solid fa-trash-can"  ></i>               
-            </div>
+    </div>
+    <div class="col-sm-1 ps-sm-1 three " id="deletebtn" onclick="deleteList(${i})">
+        <div class="icon2  d-flex align-items-center justify-content-center">
+          <i class="fa-solid fa-trash-can"  ></i>               
         </div>
-    </div>        `
+    </div>
+</div>        `
     }
     unorderList.innerHTML = cartoona;
 }
