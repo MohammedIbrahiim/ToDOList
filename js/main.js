@@ -71,20 +71,7 @@ function deleteList(linkIndexed)
     count()
 }
 
-function searchtask(searchTasks)
-{
-    let searchtaskss = [];
-    for(let i = 0 ; i<listArray.length ; i++)
-    {
-        if(listArray[i].lists.toLowerCase().includes(searchTasks.toLowerCase())==true)
-        {
-            searchtaskss.push(listArray[i])
-        }
-    }
 
-    //pass an array 
-    displaylist(searchtaskss)
-}
 
 function clearInput()
 {
