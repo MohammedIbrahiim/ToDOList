@@ -3,43 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/fontawesome-free-6.0.0-web/css/all.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>ToDoList</title>
+    <title>To-Do-Task</title>
 </head>
 <body>
-  <!--start header-->
 
-<div class="container mt-5">
-  <div class="row w-75  m-auto">
-    <div class="item ">
-      <h3 class="mt-2 text-center">To Do List</h3>
-      <div class="position-relative">
-        <input type="text" class="form-control input mt-3 " >
-        <button id="button" class="btn btn-info"><i class="fa-solid fa-plus"></i></button>
-      </div>
+<header class="header">
+    <div class="test">
+        <div class="container ">
+            <div class="row w-75 mx-auto text-center ">
+                <h3 class="mt-5 p-3 text-light" >To Do List App</h3>
+                <div class="position-relative mt-3">
+                    <input type="text" placeholder="Type Your Task Here ..." class="form-control input text-light  " >
+                    <button id="button" class="btn"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                  <h5 class="text-light text-start ms-3 pb-2  mt-5">Tasks To Do</h5>
 
-      <div class="mt-5 search w-50 m-auto text-start">
-          <h5>Search for tasks</h5>
-      <input onkeyup="searchtask(this.value)" type="text" class="form-control ">
+            </div>
+            <div id="test">
 
-      </div>
-          <ul class="list-unstyled" id="test"></ul>
-          <div class="position-relative">
-            <span id="taskLength" class="text-start ">Tasks : </span>
-            <span id="taskComplete" class="text-start position-absolute end-0 ">complete : 0</span>
+            </div>
 
-          </div>
-      </div>
-  </div>
-</div>
-<!--end foter-contact-->
+            <div class="row w-75 mx-auto mt-5">
+                <div class=" tasks d-flex justify-content-between mb-3">
+                    <p class="m-3" >All Task</p>
+                    <span id="taskLength" class="m-3 text-center">0</span>
+                </div>
+
+                <div class="tasks  d-flex justify-content-between mb-3">
+                    <p class="m-3">Completed Tasks</p>
+                    <span id="taskComplete" class="m-3 text-center">0</span>
+                </div>
+               
+            </div>
+
+            
+        </div>   
+    </div>
+
+</header>
 
 
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

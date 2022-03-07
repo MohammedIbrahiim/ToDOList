@@ -22,11 +22,14 @@ function addList()
     {
         lists : inputtxt.value,
     }
-    listArray.push(list);
-    localStorage.setItem('lists', JSON.stringify(listArray));
-    displaylist(listArray)
-    count()
-    clearInput();
+    if(list.lists!=""){
+      listArray.push(list);
+      localStorage.setItem('lists', JSON.stringify(listArray));
+      displaylist(listArray)
+      count()
+      clearInput();
+    }
+
 
 }
 
@@ -36,8 +39,23 @@ function displaylist(displaytasks)
     for(let i=0 ; i<displaytasks.length ; i++)
     {
         cartoona += `
-        <li id="cheack${i}" class="text-start p-3 mt-3 position-relative  ">${displaytasks[i].lists} <button onclick="itok(${i})" class=" position-absolute  btn btn-primary  didIt"> <i class="fa-solid fa-check "></i></button> <button id="deletebtn" onclick="deleteList(${i})"  class="position-absolute  btn2 btn btn-danger "> delete</button></li>
-        `
+        <div id="exx${i}" class="row align-items-center w-75 mx-auto gx-0 m-2">
+        <div class="col-sm-1 pe-sm-1 " onclick="itok(${i})">
+            <div class="icon  d-flex align-items-center justify-content-center">
+                <i class="far fa-check-circle check"></i>               
+            </div>
+        </div>
+        <div id="cheack${i}" class="item col-sm-10  ">
+            <div class="content mt-3 ms-3 ">
+                <h1 class="fs-6">${displaytasks[i].lists}</h1>
+            </div>
+        </div>
+        <div class="col-sm-1 ps-md-1" id="deletebtn" onclick="deleteList(${i})">
+            <div class="icon2  d-flex align-items-center justify-content-center">
+              <i class="fa-solid fa-trash-can"  ></i>               
+            </div>
+        </div>
+    </div>        `
     }
     unorderList.innerHTML = cartoona;
 }
@@ -96,22 +114,22 @@ function count()
 {
     if(taskLength.innerHTML == null)
     {
-        taskLength.innerHTML = `Tasks : ` +  `0`;
+        taskLength.innerHTML = `0`;
     
     }else
     {
-        taskLength.innerHTML = `Tasks : ` + ` ${listArray.length}`
+        taskLength.innerHTML = ` ${listArray.length}`
     }
 }
 
 function check(){
     if(taskComplete.innerHTML == null)
     {
-        taskComplete.innerHTML = `Completed: ` +  `0`;
+        taskComplete.innerHTML =   `0`;
     
     }else 
     {
-        taskComplete.innerHTML = `Completed: ` + ` ${counter}`
+        taskComplete.innerHTML =  ` ${counter}`
     }
 }
 
