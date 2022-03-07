@@ -102,3 +102,11 @@ i
     background-color: #5C76BD;
     text-decoration: line-through white solid 3px;
 }
+.one,.three
+{
+    width: 10%;
+}
+.two
+{
+    width: 90%;
+}
